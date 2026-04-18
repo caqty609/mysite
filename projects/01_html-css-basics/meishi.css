@@ -1,0 +1,81 @@
+/* ===== リセット ===== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ===== 全体 ===== */
+body {
+  font-family: 'Hiragino Kaku Gothic ProN', 'Meiryo', sans-serif;
+  background-color: #f5f5f0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ===== カード ===== */
+.card-wrapper {
+  padding: 2rem;
+}
+
+.card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 3rem 4rem;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  max-width: 400px;
+  width: 100%;
+
+  /* TODO: ここを自分好みにカスタマイズしてみよう */
+}
+
+/* ===== テキスト ===== */
+.name {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.5rem;
+}
+
+.title {
+  font-size: 0.9rem;
+  color: #888;
+  letter-spacing: 0.15em;
+  margin-bottom: 1.5rem;
+}
+
+.message {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+/* ===== ボタン ===== */
+.links {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.link-btn {
+  display: inline-block;
+  padding: 0.6rem 1.5rem;
+  border: 2px solid #1a1a1a;
+  border-radius: 4px;
+  color: #1a1a1a;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.link-btn:hover {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}

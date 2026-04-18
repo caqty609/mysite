@@ -1,12 +1,59 @@
 <!DOCTYPE html>
-<html lang="jp">
+<html lang="ja">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>オリジナルサイト</title>
+  <title>Megu Web Studio</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Hiragino Kaku Gothic ProN', 'Meiryo', sans-serif;
+      background: #0f0f0f;
+      color: #f0f0f0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 2rem;
+      padding: 2rem;
+    }
+    h1 { font-size: 2.5rem; letter-spacing: 0.2em; }
+    p { color: #888; letter-spacing: 0.1em; }
+    .stage {
+      border: 1px solid #333;
+      border-radius: 8px;
+      padding: 1.2rem 2rem;
+      width: 100%;
+      max-width: 500px;
+    }
+    .stage-title { font-size: 0.75rem; color: #555; margin-bottom: 0.4rem; letter-spacing: 0.1em; }
+    .stage-name { font-size: 1rem; }
+    .badge {
+      display: inline-block;
+      background: #1a1a1a;
+      border: 1px solid #333;
+      padding: 0.3rem 0.8rem;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      color: #888;
+      margin-top: 0.5rem;
+    }
+  </style>
 </head>
 <body>
-  <h1>オリジナルサイト</h1>
-  <p>はじめてのオリジナルサイトです！ようやく完成です</p>
+  <h1>Megu Web Studio</h1>
+  <p>本物のWEBエンジニアになるための訓練場</p>
+
+  <div class="stage">
+    <p class="stage-title">CURRENT STAGE</p>
+    <p class="stage-name">Stage 1 — HTML/CSS基礎固め</p>
+    <span class="badge">Lv.1 見習い</span>
+  </div>
+
+  <div class="stage">
+    <p class="stage-title">NEXT TASK</p>
+    <p class="stage-name">projects/01_html-css-basics/ の名刺サイトを作る</p>
+  </div>
 </body>
 </html>
