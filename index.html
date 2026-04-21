@@ -27,24 +27,27 @@
 
       <!-- フェーズ1: 困った顔（最初に表示） -->
       <div class="face-unit" id="faceSad">
-        <div class="balloon balloon-sad">困った</div>
-        <svg class="face-svg" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="60" cy="60" r="54" fill="none" stroke="#333" stroke-width="2.5"/>
-          <!-- メガネ左 -->
-          <rect x="22" y="50" width="30" height="22" rx="6" fill="none" stroke="#333" stroke-width="2.2"/>
-          <!-- メガネ右 -->
-          <rect x="68" y="50" width="30" height="22" rx="6" fill="none" stroke="#333" stroke-width="2.2"/>
-          <!-- メガネブリッジ -->
-          <line x1="52" y1="61" x2="68" y2="61" stroke="#333" stroke-width="2"/>
-          <!-- 困り眉（八の字） -->
-          <path d="M26 45 Q37 38 46 45" fill="none" stroke="#333" stroke-width="2" stroke-linecap="round"/>
-          <path d="M74 45 Q83 38 94 45" fill="none" stroke="#333" stroke-width="2" stroke-linecap="round"/>
-          <!-- 困り口 -->
-          <path d="M42 88 Q60 78 78 88" fill="none" stroke="#333" stroke-width="2.2" stroke-linecap="round"/>
+        <div class="balloon balloon-sad">困<br>っ<br>た</div>
+        <svg class="face-svg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+          <!-- 顔の輪郭 -->
+          <circle cx="100" cy="105" r="88" fill="none" stroke="#666" stroke-width="3"/>
+          <!-- 左レンズ（円形） -->
+          <circle cx="68" cy="100" r="30" fill="none" stroke="#666" stroke-width="2.5"/>
+          <!-- 右レンズ（円形） -->
+          <circle cx="130" cy="100" r="27" fill="none" stroke="#666" stroke-width="2.5"/>
+          <!-- ブリッジ -->
+          <line x1="98" y1="100" x2="103" y2="100" stroke="#666" stroke-width="2.5"/>
+          <!-- テンプル（右側のつる） -->
+          <path d="M157 100 Q168 98 170 112" fill="none" stroke="#666" stroke-width="2.5" stroke-linecap="round"/>
+          <!-- 困り眉 -->
+          <path d="M46 68 Q59 60 72 68" fill="none" stroke="#666" stroke-width="2.2" stroke-linecap="round"/>
+          <path d="M108 68 Q119 60 144 68" fill="none" stroke="#666" stroke-width="2.2" stroke-linecap="round"/>
+          <!-- 困り口（への字） -->
+          <path d="M74 148 Q100 136 126 148" fill="none" stroke="#666" stroke-width="2.5" stroke-linecap="round"/>
           <!-- ふわふわ文字 -->
-          <text class="letter-m" x="28" y="68" font-size="13" fill="#555" font-family="sans-serif">m</text>
-          <text class="letter-e" x="74" y="66" font-size="13" fill="#555" font-family="sans-serif">e</text>
-          <text class="letter-u" x="55" y="100" font-size="12" fill="#555" font-family="sans-serif">n</text>
+          <text class="letter-m" x="57" y="108" font-size="22" fill="#666" font-family="Georgia, serif" font-style="italic" text-anchor="middle">3</text>
+          <text class="letter-e" x="130" y="108" font-size="20" fill="#666" font-family="Georgia, serif" font-style="italic" text-anchor="middle">e</text>
+          <text class="letter-u" x="100" y="162" font-size="18" fill="#666" font-family="Georgia, serif" font-style="italic" text-anchor="middle">n</text>
         </svg>
       </div>
 
@@ -52,24 +55,27 @@
 
       <!-- フェーズ2&3: ニコニコ顔 -->
       <div class="face-unit face-unit--hidden" id="faceHappy">
-        <div class="balloon balloon-happy" id="balloonHappy">助かった</div>
-        <svg class="face-svg" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="60" cy="60" r="54" fill="none" stroke="#333" stroke-width="2.5"/>
-          <!-- メガネ左 -->
-          <rect x="22" y="50" width="30" height="22" rx="6" fill="none" stroke="#333" stroke-width="2.2"/>
-          <!-- メガネ右 -->
-          <rect x="68" y="50" width="30" height="22" rx="6" fill="none" stroke="#333" stroke-width="2.2"/>
-          <!-- メガネブリッジ -->
-          <line x1="52" y1="61" x2="68" y2="61" stroke="#333" stroke-width="2"/>
+        <div class="balloon balloon-happy" id="balloonHappy">助<br>か<br>っ<br>た</div>
+        <svg class="face-svg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+          <!-- 顔の輪郭 -->
+          <circle cx="100" cy="105" r="88" fill="none" stroke="#666" stroke-width="3"/>
+          <!-- 左レンズ（円形） -->
+          <circle cx="68" cy="100" r="30" fill="none" stroke="#666" stroke-width="2.5"/>
+          <!-- 右レンズ（円形） -->
+          <circle cx="130" cy="100" r="27" fill="none" stroke="#666" stroke-width="2.5"/>
+          <!-- ブリッジ -->
+          <line x1="98" y1="100" x2="103" y2="100" stroke="#666" stroke-width="2.5"/>
+          <!-- テンプル（右側のつる） -->
+          <path d="M157 100 Q168 98 170 112" fill="none" stroke="#666" stroke-width="2.5" stroke-linecap="round"/>
           <!-- ニコニコ眉 -->
-          <path d="M26 44 Q37 37 46 44" fill="none" stroke="#333" stroke-width="2" stroke-linecap="round"/>
-          <path d="M74 44 Q83 37 94 44" fill="none" stroke="#333" stroke-width="2" stroke-linecap="round"/>
-          <!-- ニコニコ口（大きな笑顔） -->
-          <path d="M40 78 Q60 96 80 78" fill="none" stroke="#333" stroke-width="2.2" stroke-linecap="round"/>
+          <path d="M46 66 Q59 57 72 64" fill="none" stroke="#666" stroke-width="2.2" stroke-linecap="round"/>
+          <path d="M108 64 Q122 57 144 66" fill="none" stroke="#666" stroke-width="2.2" stroke-linecap="round"/>
+          <!-- ニコニコ口（やわらかいU字） -->
+          <path d="M78 148 Q100 164 122 148" fill="none" stroke="#666" stroke-width="2.5" stroke-linecap="round"/>
           <!-- ふわふわ文字 -->
-          <text class="letter-m" x="28" y="68" font-size="13" fill="#555" font-family="sans-serif">m</text>
-          <text class="letter-e" x="74" y="66" font-size="13" fill="#555" font-family="sans-serif">e</text>
-          <text class="letter-u" x="55" y="100" font-size="12" fill="#555" font-family="sans-serif">u</text>
+          <text class="letter-m" x="57" y="108" font-size="22" fill="#666" font-family="Georgia, serif" font-style="italic" text-anchor="middle">3</text>
+          <text class="letter-e" x="130" y="108" font-size="20" fill="#666" font-family="Georgia, serif" font-style="italic" text-anchor="middle">e</text>
+          <text class="letter-u" x="100" y="166" font-size="18" fill="#666" font-family="Georgia, serif" font-style="italic" text-anchor="middle">u</text>
         </svg>
       </div>
 

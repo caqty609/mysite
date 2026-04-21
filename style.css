@@ -71,8 +71,9 @@ body {
 /* 顔ひとつ分のユニット */
 .face-unit {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;   /* 吹き出しを左、顔を右に並べる */
   align-items: center;
+  gap: 16px;
   transition: opacity 0.9s ease, transform 0.9s ease;
 }
 
@@ -99,19 +100,44 @@ body {
   pointer-events: none;
 }
 
-/* 吹き出し */
+/* 吹き出し（右向きしっぽ付き楕円） */
 .balloon {
-  width: 62px;
-  height: 62px;
+  width: 72px;
+  height: 88px;
   border-radius: 50%;
   background: #fff;
-  border: 1.5px solid #ccc;
+  border: 1.5px solid #bbb;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 12px;
-  margin-bottom: 10px;
+  line-height: 1.7;
+  text-align: center;
+  position: relative;
+  flex-shrink: 0;
   transition: opacity 0.9s ease;
+}
+
+/* しっぽ（外枠） */
+.balloon::before {
+  content: '';
+  position: absolute;
+  right: -17px;
+  bottom: 22px;
+  border-width: 8px 0 6px 18px;
+  border-style: solid;
+  border-color: transparent transparent transparent #bbb;
+}
+
+/* しっぽ（内側・白） */
+.balloon::after {
+  content: '';
+  position: absolute;
+  right: -14px;
+  bottom: 23px;
+  border-width: 7px 0 5px 16px;
+  border-style: solid;
+  border-color: transparent transparent transparent #fff;
 }
 
 .balloon--fade {
@@ -120,8 +146,8 @@ body {
 
 /* SVGの顔 */
 .face-svg {
-  width: 120px;
-  height: 120px;
+  width: 200px;
+  height: 200px;
 }
 
 /* ===== m・e・u ふわふわアニメーション ===== */
