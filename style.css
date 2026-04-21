@@ -1,0 +1,344 @@
+/* ===== リセット・基本設定 ===== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg: #f7f2ec;
+  --primary: #e8896a;
+  --text: #333;
+  --light-text: #888;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* ===== ヘッダー ===== */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 48px;
+}
+
+.logo {
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--primary);
+}
+
+.nav {
+  display: flex;
+  gap: 36px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: var(--text);
+  font-size: 14px;
+  transition: color 0.2s;
+}
+
+.nav a:hover {
+  color: var(--primary);
+}
+
+/* ===== ヒーロー（メインビジュアル）===== */
+.hero {
+  text-align: center;
+  padding: 48px 20px 72px;
+}
+
+.hero-visual {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+/* 顔ひとつ分のユニット */
+.face-unit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: opacity 0.9s ease, transform 0.9s ease;
+}
+
+/* 助かった顔は最初は非表示 */
+.face-unit--hidden {
+  opacity: 0;
+  transform: scale(0.88);
+  position: absolute;
+  pointer-events: none;
+}
+
+/* JSで付けるクラス */
+.face-unit--visible {
+  opacity: 1;
+  transform: scale(1);
+  position: relative;
+  pointer-events: auto;
+}
+
+.face-unit--gone {
+  opacity: 0;
+  transform: scale(0.88);
+  position: absolute;
+  pointer-events: none;
+}
+
+/* 吹き出し */
+.balloon {
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  background: #fff;
+  border: 1.5px solid #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  margin-bottom: 10px;
+  transition: opacity 0.9s ease;
+}
+
+.balloon--fade {
+  opacity: 0;
+}
+
+/* SVGの顔 */
+.face-svg {
+  width: 120px;
+  height: 120px;
+}
+
+/* 「を」「に」 */
+.connector {
+  font-size: 30px;
+  padding-bottom: 12px;
+  color: var(--text);
+}
+
+.connector--ni {
+  /* 「に」は最初は非表示 → JSで表示 */
+  opacity: 0;
+  transition: opacity 0.9s ease;
+}
+
+.connector--ni.show {
+  opacity: 1;
+}
+
+/* 名前 */
+.hero-name {
+  font-size: 18px;
+  color: var(--primary);
+  letter-spacing: 0.12em;
+}
+
+/* ===== セクション共通 ===== */
+.section {
+  padding: 72px 48px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 38px;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  margin-bottom: 48px;
+}
+
+.title-initial {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  background: var(--primary);
+  color: #fff;
+  border-radius: 50%;
+  font-size: 36px;
+  margin-right: 2px;
+  vertical-align: middle;
+  line-height: 1;
+}
+
+/* ===== Works ===== */
+.works-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 36px;
+  max-width: 760px;
+  margin: 0 auto 40px;
+}
+
+.work-thumb {
+  background: #ccc;
+  aspect-ratio: 4 / 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #666;
+  font-size: 13px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+
+.work-cat {
+  font-size: 11px;
+  color: var(--light-text);
+  margin-bottom: 4px;
+}
+
+.work-name {
+  font-size: 13px;
+}
+
+.more-wrap {
+  text-align: center;
+}
+
+.more-btn {
+  display: inline-block;
+  padding: 9px 32px;
+  border: 1.5px solid var(--primary);
+  color: var(--primary);
+  text-decoration: none;
+  font-size: 13px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.more-btn:hover {
+  background: var(--primary);
+  color: #fff;
+}
+
+/* ===== About ===== */
+.about-ruby {
+  text-align: center;
+  font-size: 13px;
+  color: var(--light-text);
+  margin-top: -32px;
+  margin-bottom: 40px;
+}
+
+.about-inner {
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  gap: 48px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about-photo {
+  background: #ccc;
+  aspect-ratio: 3 / 4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.about-meta {
+  margin-bottom: 16px;
+}
+
+.meta-label {
+  font-size: 11px;
+  color: var(--light-text);
+  margin-bottom: 4px;
+}
+
+.meta-body {
+  font-size: 12px;
+  line-height: 1.9;
+}
+
+.about-catch {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  line-height: 1.6;
+}
+
+.about-body {
+  font-size: 13px;
+  line-height: 2;
+  margin-bottom: 18px;
+  color: #444;
+}
+
+/* ===== Contact ===== */
+.contact-section {
+  text-align: center;
+}
+
+.contact-body {
+  font-size: 13px;
+  line-height: 2.2;
+  margin-bottom: 40px;
+  color: #444;
+}
+
+.contact-icons {
+  display: flex;
+  justify-content: center;
+  gap: 36px;
+}
+
+.contact-link {
+  display: block;
+  opacity: 0.8;
+  transition: opacity 0.2s;
+}
+
+.contact-link:hover {
+  opacity: 1;
+}
+
+/* ===== フッター ===== */
+.footer {
+  background: var(--primary);
+  color: #fff;
+  padding: 28px 48px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-logo {
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.footer-nav {
+  display: flex;
+  gap: 28px;
+}
+
+.footer-nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.footer-copy {
+  font-size: 11px;
+  opacity: 0.8;
+}

@@ -1,12 +1,158 @@
 <!DOCTYPE html>
-<html lang="jp">
+<html lang="ja">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>オリジナルサイト</title>
+  <title>meguo portfolio | megumi oishi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>オリジナルサイト</h1>
-  <p>はじめてのオリジナルサイトです！ようやく完成です</p>
+
+  <!-- ヘッダー -->
+  <header class="header">
+    <div class="logo">meguo<br>portfolio</div>
+    <nav class="nav">
+      <a href="#works">works</a>
+      <a href="#about">about</a>
+      <a href="#contact">contact</a>
+    </nav>
+  </header>
+
+  <!-- メインビジュアル -->
+  <section class="hero">
+    <div class="hero-visual">
+
+      <!-- フェーズ1: 困った顔（最初に表示） -->
+      <div class="face-unit" id="faceSad">
+        <div class="balloon balloon-sad">困った</div>
+        <svg class="face-svg" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="60" cy="60" r="54" fill="none" stroke="#333" stroke-width="2.5"/>
+          <!-- メガネ左 -->
+          <rect x="22" y="50" width="30" height="22" rx="6" fill="none" stroke="#333" stroke-width="2.2"/>
+          <!-- メガネ右 -->
+          <rect x="68" y="50" width="30" height="22" rx="6" fill="none" stroke="#333" stroke-width="2.2"/>
+          <!-- メガネブリッジ -->
+          <line x1="52" y1="61" x2="68" y2="61" stroke="#333" stroke-width="2"/>
+          <!-- 困り眉（八の字） -->
+          <path d="M26 45 Q37 38 46 45" fill="none" stroke="#333" stroke-width="2" stroke-linecap="round"/>
+          <path d="M74 45 Q83 38 94 45" fill="none" stroke="#333" stroke-width="2" stroke-linecap="round"/>
+          <!-- 困り口 -->
+          <path d="M42 88 Q60 78 78 88" fill="none" stroke="#333" stroke-width="2.2" stroke-linecap="round"/>
+        </svg>
+      </div>
+
+      <span class="connector" id="connectorWo">を</span>
+
+      <!-- フェーズ2&3: ニコニコ顔 -->
+      <div class="face-unit face-unit--hidden" id="faceHappy">
+        <div class="balloon balloon-happy" id="balloonHappy">助かった</div>
+        <svg class="face-svg" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="60" cy="60" r="54" fill="none" stroke="#333" stroke-width="2.5"/>
+          <!-- メガネ左 -->
+          <rect x="22" y="50" width="30" height="22" rx="6" fill="none" stroke="#333" stroke-width="2.2"/>
+          <!-- メガネ右 -->
+          <rect x="68" y="50" width="30" height="22" rx="6" fill="none" stroke="#333" stroke-width="2.2"/>
+          <!-- メガネブリッジ -->
+          <line x1="52" y1="61" x2="68" y2="61" stroke="#333" stroke-width="2"/>
+          <!-- ニコニコ眉 -->
+          <path d="M26 44 Q37 37 46 44" fill="none" stroke="#333" stroke-width="2" stroke-linecap="round"/>
+          <path d="M74 44 Q83 37 94 44" fill="none" stroke="#333" stroke-width="2" stroke-linecap="round"/>
+          <!-- ニコニコ口（大きな笑顔） -->
+          <path d="M40 78 Q60 96 80 78" fill="none" stroke="#333" stroke-width="2.2" stroke-linecap="round"/>
+        </svg>
+      </div>
+
+      <span class="connector connector--ni" id="connectorNi">に</span>
+    </div>
+
+    <p class="hero-name">megumi oishi</p>
+  </section>
+
+  <!-- Works -->
+  <section id="works" class="section works-section">
+    <h2 class="section-title"><span class="title-initial">w</span>orks</h2>
+    <div class="works-grid">
+      <article class="work-card">
+        <div class="work-thumb"><span>モックアップが<br>写ってる画像</span></div>
+        <p class="work-cat">制作物のカテゴリー</p>
+        <p class="work-name">制作物の名前制作物の名前制作物の名前</p>
+      </article>
+      <article class="work-card">
+        <div class="work-thumb"><span>モックアップが<br>写ってる画像</span></div>
+        <p class="work-cat">制作物のカテゴリー</p>
+        <p class="work-name">制作物の名前制作物の名前制作物の名前</p>
+      </article>
+      <article class="work-card">
+        <div class="work-thumb"><span>モックアップが<br>写ってる画像</span></div>
+        <p class="work-cat">制作物のカテゴリー</p>
+        <p class="work-name">制作物の名前制作物の名前制作物の名前</p>
+      </article>
+      <article class="work-card">
+        <div class="work-thumb"><span>モックアップが<br>写ってる画像</span></div>
+        <p class="work-cat">制作物のカテゴリー</p>
+        <p class="work-name">制作物の名前制作物の名前制作物の名前</p>
+      </article>
+    </div>
+    <div class="more-wrap">
+      <a href="#" class="more-btn">more ▷</a>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="section about-section">
+    <h2 class="section-title"><span class="title-initial">a</span>bout</h2>
+    <p class="about-ruby">オーイシメグミ</p>
+    <div class="about-inner">
+      <div class="about-left">
+        <div class="about-photo"><span>写真</span></div>
+        <div class="about-meta">
+          <p class="meta-label">skills ···················</p>
+          <p class="meta-body">html / css / figma / canva / illustrator /<br>word / excel / clip studio</p>
+        </div>
+        <div class="about-meta">
+          <p class="meta-label">やりたいこと</p>
+          <p class="meta-body">アプリ制作 / 簿記3級取得 / オフ会企画・主催</p>
+        </div>
+      </div>
+      <div class="about-right">
+        <p class="about-catch">埋もれた想いを見えるカタチへ。</p>
+        <p class="about-body">長年事務職を経験する中で、「伝え方によって信頼の築き方が変わる」という場面に何度か出会いました。どれだけ丁寧に作られていても、うまく伝わらなければ意味がない。一方で、見せ方ひとつで広く届くこともある。そんな経験から、「伝え方」を支える仕事をしたいと思い、Webデザインの学習を始めました。また、Webを通じて人と繋がり、場所にとらわれずに想いを届けられる可能性にも魅力を感じています。</p>
+        <p class="about-body">制作では、一方的につくるのではなく、想いや背景を丁寧にお伺いしながら、一緒に形にしていくことを大切にしています。"ちゃんと伝わる"だけでなく"その人らしく伝わる"ことを目指して、伴走しながら制作いたします。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section contact-section">
+    <h2 class="section-title"><span class="title-initial">c</span>ontact</h2>
+    <p class="contact-body">お仕事のご依頼はもちろん、「こんなこと相談していいのかな？」という段階でも大丈夫です。<br>一緒に考えながら、最適な形をご提案します。お気軽にご連絡ください。</p>
+    <div class="contact-icons">
+      <a href="#" class="contact-link" aria-label="X(Twitter)">
+        <svg viewBox="0 0 24 24" width="34" height="34" fill="#444"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+      </a>
+      <a href="mailto:your@email.com" class="contact-link" aria-label="メール">
+        <svg viewBox="0 0 24 24" width="34" height="34" fill="none" stroke="#444" stroke-width="1.8"><rect x="2" y="4" width="20" height="16" rx="2.5"/><path d="m2 7 10 7 10-7"/></svg>
+      </a>
+      <a href="#" class="contact-link" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" width="34" height="34" fill="none" stroke="#444" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5.5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.2" fill="#444" stroke="none"/></svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- フッター -->
+  <footer class="footer">
+    <div class="footer-logo">meguo<br>portfolio</div>
+    <nav class="footer-nav">
+      <a href="#works">works</a>
+      <a href="#about">about</a>
+      <a href="#contact">contact</a>
+    </nav>
+    <p class="footer-copy">©portfolio2026_name</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
